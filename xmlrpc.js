@@ -120,7 +120,7 @@ exports.route = function route(handlers) {
             }
         }
         else {
-            res.send(new XmlRpcFault(-32601, 'requested method ' + method + ' not found'));
+            res.send(new XmlRpcFault(-32601, 'requested method ' + method + ' not found').xml());
         }
 
     };
