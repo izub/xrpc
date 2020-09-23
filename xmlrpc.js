@@ -128,6 +128,9 @@ exports.route = function route(handlers) {
 };
 
 function getRef(o, s) {
+    if (!s) {
+        return;
+    }
     s = s.replace(/\[(\w+)\]/g, '.$1');
     s = s.replace(/^\./, '');
     var a = s.split('.');
